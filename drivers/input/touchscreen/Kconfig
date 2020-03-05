@@ -1345,4 +1345,13 @@ source "drivers/input/touchscreen/nt36xxx/Kconfig"
 
 source "drivers/input/touchscreen/goodix_berlin_driver/Kconfig"
 
+config TOUCHSCREEN_DWAV_USB_MT
+	tristate "D-WAV Scientific USB MultiTouch"
+	depends on USB_ARCH_HAS_HCD
+	select USB
+	help
+	  Say Y here if you have a D-WAV Scientific USB(HID) based MultiTouch
+	  controller.
+	  module will be called dwav-usb-mt.
+
 endif
